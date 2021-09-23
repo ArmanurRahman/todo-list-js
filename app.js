@@ -40,7 +40,11 @@ const deleteCheck = (event) => {
     //delete todo
     if (item.classList[0] === "trash-btn") {
         const todo = item.parentElement;
-        todo.remove();
+        //animation
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", () => {
+            todo.remove();
+        });
     }
 
     //complete todo
