@@ -42,6 +42,12 @@ const deleteCheck = (event) => {
         const todo = item.parentElement;
         todo.remove();
     }
+
+    //complete todo
+    if (item.classList[0] === "complete-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+    }
 };
 
 //add event  listener
